@@ -9,7 +9,9 @@
 
 @foreach (var todo in Model)
 {
-    <div>
-        @todo.Id  - @todo.Description 
-    </div>
+<div>
+    <a href="/Home/Details/@todo.Id">@todo.Id - @todo.Description </a>
+    <a href="/Home/Delete/@todo.Id">Delete</a>
+</div>
 }
+    <a href="/Home/Create">Create a New Todo</a>

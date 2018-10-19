@@ -9,5 +9,8 @@ namespace TodoAppLive
     public interface ITodoRepository
     {
         IEnumerable<Todo> GetAll();
+        Todo GetById(int id);
+        void Create(Todo userTodoData);
+        void Delete(Todo toDelete);
     }
 }

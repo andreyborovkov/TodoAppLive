@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TodoAppLive.Models;
 
 namespace TodoAppLive.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20181018182242_Categories")]
+    partial class Categories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,11 +40,6 @@ namespace TodoAppLive.Migrations
                     b.HasIndex("TodoId");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new { Id = 1, Name = "Home" },
-                        new { Id = 2, Name = "Business" }
-                    );
                 });
 
             modelBuilder.Entity("TodoAppLive.Models.Todo", b =>
@@ -58,10 +55,6 @@ namespace TodoAppLive.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Todos");
-
-                    b.HasData(
-                        new { Id = 1, Description = "Code something", DueDate = new DateTime(2018, 10, 18, 15, 12, 10, 639, DateTimeKind.Local) }
-                    );
                 });
 
             modelBuilder.Entity("TodoAppLive.Models.TodoCategory", b =>

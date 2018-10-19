@@ -1,0 +1,10 @@
+﻿@model TodoAppLive.Models.Todo
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<h3>@Model.Id - @Model.Description</h3>
+<p>@Model.DueDate.ToShortDateString()</p>
+<a href="/">Home</a>
