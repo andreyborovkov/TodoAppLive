@@ -10,6 +10,8 @@ namespace TodoAppLive.Models
         public int Id { get; set; }
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
-        public List<Category> TodoCategories { get; set; }
+        public virtual List<TodoCategory> TodoCategories { get; set; }
+        public int OwnerId { get; set; }
+        public virtual Owner Owner { get; set; }
     }
 }

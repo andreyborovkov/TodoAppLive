@@ -10,7 +10,7 @@
 @foreach (var todo in Model)
 {
 <div>
-    <a href="/Home/Details/@todo.Id">@todo.Id - @todo.Description </a>
+    <a href="/Home/Details/@todo.Id">@todo.Id - @todo.Description (Owner : @todo.Owner.Name)</a>
     <a href="/Home/Delete/@todo.Id">Delete</a>
 </div>
 }

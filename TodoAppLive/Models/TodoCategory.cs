@@ -9,8 +9,8 @@ namespace TodoAppLive.Models
     {
         public int Id { get; set; }
         public int TodoId { get; set; }
-        public Todo Todo { get; set; }
+        public virtual Todo Todo { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

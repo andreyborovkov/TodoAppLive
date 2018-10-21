@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20181018175844_CategoryMigration.cs" />
     <Compile Remove="Migrations\20181018175844_CategoryMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181019151151_Owners.cs" />
+    <Compile Remove="Migrations\20181019151151_Owners.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +18,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
       <PrivateAssets>all</PrivateAssets>
